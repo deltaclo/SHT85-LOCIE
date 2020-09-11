@@ -1,0 +1,9 @@
+Qty;Value;Device;Fabricant;Package;Parts;Description
+1;;Adafruit 3405;Adafruit;Feather Board;ESP32-1, ESP32-2;Outils de développement Wi-Fi (802.11) HUZZAH32 - ESP32 Feather Board
+1;;Adafruit 3201;Adafruit;Feather Board;ETHER-1, ETHER-2;Outils de développement Ethernet  Ethernet FeatherWing
+1;;Adafruit 2922;Adafruit;Feather Board;SD-1, SD-2;Accessoires Adafruit Adalogger FeatherWing - RTC + SD Add-on For All Feather Boards
+2;;TCA9548APWR;Texas Instruments;TSSOP24;U1, U2;CI commutateur - Divers 8-Channel I2C Switch
+2;0;MCU08050Z0000ZP500;Vishay;0805;R1, R2;Résistances à couches minces - CMS Zero ohm Jumper
+36;10K;TNPW080510K0BEEA;Vishay;0805;R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24, R25, R26, R27, R28, R29, R30, R31, R32, R33, R34, R35, R36, R37, R38;Résistances à couches minces - CMS 10Kohms .1% 25ppm
+2;10uF;VJ0805G106KXYTW1BC;Vishay;0805;C1, C2;Condensateurs céramique multicouches MLCC - CMS 10uF 6.3volts 10%
+16;;TSW-102-07-T-D;Samtec;PINHEAD 2.54 2x2;SHT-1, SHT-2, SHT-3, SHT-4, SHT-5, SHT-6, SHT-7, SHT-8, SHT-9, SHT-10, SHT-11, SHT-12, SHT-13, SHT-14, SHT-15, SHT-16;CONN HEADER VERT 4POS 2.54MM
