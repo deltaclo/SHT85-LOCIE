@@ -236,8 +236,8 @@ void writeConfigFile() {
   //network
   appendFile(SD, CONFIG_FILE, "network=");
   char networkcopy[50];
-  boxName.toCharArray(networkcopy, 50);
-  appendFile(SD, CONFIG_FILE, networkcopy);
+  //network.toCharArray(networkcopy, 50);
+  appendFile(SD, CONFIG_FILE, network);
   appendFile(SD, CONFIG_FILE, "\n");
   //IP
   appendFile(SD, CONFIG_FILE, "IP=");
