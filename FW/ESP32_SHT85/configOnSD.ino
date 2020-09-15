@@ -49,6 +49,11 @@ boolean readConfiguration() {
       Serial.print("Read ssid: ");
       Serial.println(ssid);
 
+    } else if (cfg.nameIs("network")) {
+      network = cfg.copyValue();//cfg.getBooleanValue();
+      Serial.print("Read network: ");
+      Serial.println(network);
+
     } else if (cfg.nameIs("password")) {
       password = cfg.copyValue();//cfg.getBooleanValue();
       Serial.print("Read password: ");
@@ -121,7 +126,7 @@ boolean readConfiguration() {
       Capteur[1] = cfgSensors.copyValue();//cfg.getBooleanValue();
       Serial.print("Read SHT2: ");
       Serial.println(Capteur[1]);
-      
+
     } else if (cfgSensors.nameIs("SHT3")) {
       Capteur[2] = cfgSensors.copyValue();//cfg.getBooleanValue();
       Serial.print("Read SHT3: ");
@@ -205,59 +210,67 @@ boolean readConfiguration() {
 
 void writeConfigFile() {
   /*Serial.println(ssid);
-  Serial.println(password);
-  Serial.println(boxName);
-  Serial.println(capteurType);
-  Serial.println(versionFW);
-  Serial.println(IP);
-  Serial.println(Passerel);
-  Serial.println(Masque);
-  Serial.println(MAC);*/
+    Serial.println(password);
+    Serial.println(boxName);
+    Serial.println(capteurType);
+    Serial.println(versionFW);
+    Serial.println(IP);
+    Serial.println(Passerel);
+    Serial.println(Masque);
+    Serial.println(MAC);*/
 
   deleteFile(SD, CONFIG_FILE);
   writeFile(SD, CONFIG_FILE, "");
-
-  appendFile(SD, CONFIG_FILE, "ssid=");
-  appendFile(SD, CONFIG_FILE, ssid);
-  appendFile(SD, CONFIG_FILE, "\n");
-
-  appendFile(SD, CONFIG_FILE, "password=");
-  appendFile(SD, CONFIG_FILE, password);
-  appendFile(SD, CONFIG_FILE, "\n");
-
+  //Box Name
   appendFile(SD, CONFIG_FILE, "boxName=");
   char boxNamecopy[50];
   boxName.toCharArray(boxNamecopy, 50);
   appendFile(SD, CONFIG_FILE, boxNamecopy);
   appendFile(SD, CONFIG_FILE, "\n");
-
-  /*appendFile(SD, CONFIG_FILE, "capteurType=");
+  //Capteur type
+  appendFile(SD, CONFIG_FILE, "capteurType=");
   char capteurTypecopy[50];
   capteurType.toCharArray(capteurTypecopy, 50);
   appendFile(SD, CONFIG_FILE, capteurTypecopy);
-  appendFile(SD, CONFIG_FILE, "\n");*/
-
-  /*appendFile(SD, CONFIG_FILE, "versionFW=");
-  char versionFWcopy[50];
-  versionFW.toCharArray(versionFWcopy, 50);
-  appendFile(SD, CONFIG_FILE, versionFWcopy);
-  appendFile(SD, CONFIG_FILE, "\n");*/
-
+  appendFile(SD, CONFIG_FILE, "\n");
+  //network
+  appendFile(SD, CONFIG_FILE, "network=");
+  char networkcopy[50];
+  boxName.toCharArray(networkcopy, 50);
+  appendFile(SD, CONFIG_FILE, networkcopy);
+  appendFile(SD, CONFIG_FILE, "\n");
+  //IP
   appendFile(SD, CONFIG_FILE, "IP=");
   appendFile(SD, CONFIG_FILE, IP);
   appendFile(SD, CONFIG_FILE, "\n");
-
+  //GW
   appendFile(SD, CONFIG_FILE, "Passerel=");
   appendFile(SD, CONFIG_FILE, Passerel);
   appendFile(SD, CONFIG_FILE, "\n");
-
+  //Mask
   appendFile(SD, CONFIG_FILE, "Masque=");
   appendFile(SD, CONFIG_FILE, Masque);
   appendFile(SD, CONFIG_FILE, "\n");
-
+  //MAC
   appendFile(SD, CONFIG_FILE, "MAC=");
   appendFile(SD, CONFIG_FILE, MAC);
   appendFile(SD, CONFIG_FILE, "\n");
+  //SSID
+  appendFile(SD, CONFIG_FILE, "ssid=");
+  appendFile(SD, CONFIG_FILE, ssid);
+  appendFile(SD, CONFIG_FILE, "\n");
+  //Wifi Password
+  appendFile(SD, CONFIG_FILE, "password=");
+  appendFile(SD, CONFIG_FILE, password);
+  appendFile(SD, CONFIG_FILE, "\n");
+  //FW Version
+  /*appendFile(SD, CONFIG_FILE, "versionFW=");
+    char versionFWcopy[50];
+    versionFW.toCharArray(versionFWcopy, 50);
+    appendFile(SD, CONFIG_FILE, versionFWcopy);
+    appendFile(SD, CONFIG_FILE, "\n");*/
+
+
 
   readFile(SD, CONFIG_FILE);
 }
@@ -266,7 +279,7 @@ void writeSensorFile() {
   deleteFile(SD, SENSORS_FILE);
   writeFile(SD, SENSORS_FILE, "");
   for (int i = 0; i < 16; i++) {
-    String sensorID = String(i+1);
+    String sensorID = String(i + 1);
     char sensorIDcopy[50];
     sensorID.toCharArray(sensorIDcopy, 50);
 

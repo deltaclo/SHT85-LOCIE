@@ -120,6 +120,11 @@ void SerialCOM() {
         inputString.trim();
         inputString.toCharArray(MAC, 50);
         Serial.println("OK");
+      } else if (inputString.startsWith("SET NETWORK=")) {
+        inputString = inputString.substring(11);
+        inputString.trim();
+        inputString.toCharArray(network, 50);
+        Serial.println("OK");
       } else {
         Serial.println("NOK");
         ok = false;

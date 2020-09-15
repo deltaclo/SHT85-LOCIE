@@ -2,7 +2,8 @@
 #define TCAADDR2 0x71
 
 //Network selection
-char* Network        = "ETH";
+char* network        = "NONE";
+int NetworkSelect    = 0;
 
 //Wifi
 const char* ssid     = "SSID";
@@ -14,16 +15,17 @@ char* Passerel;
 char* Masque;
 char* MAC;
 
-//IPAddress local_IP(192, 168, 1, 240);
-//IPAddress gateway(192, 168, 1, 1);
-//IPAddress subnet(255, 255, 255, 0);
+IPAddress local_IP;
+IPAddress gateway;
+IPAddress subnet;
 byte macAdresse[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 WiFiServer server(80);
+EthernetServer serverEth(80);
 
 String boxName = "testBox";
 String capteurType = "SHT85";
-String versionFW = "  Version : 0.5beta WIFI      ";
+String versionFW = "  Version : 0.6b WIFI + ETH  ";
 
 //SHT
 SHTSensor sht[16](SHTSensor::SHT3X);

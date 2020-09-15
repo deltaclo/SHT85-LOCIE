@@ -4,14 +4,17 @@
 */
 
 #include <WiFi.h>
+#include <Ethernet.h>
+
+#include <SPI.h>
 #include <Wire.h>
 #include "SHTSensor.h"
 #include "FS.h"
 #include <SD.h>
-#include "SPI.h"
 #include "RTClib.h"
-#include "variables.h"
 #include <SDConfigFile.h>
+
+#include "variables.h"
 
 
 void setup()
@@ -33,8 +36,19 @@ void setup()
   loadConfigFile();
   delay(100);
 
-  // We start by connecting to a WiFi network
-
+  //Network config select
+  String nSelected = network;
+  if (nSelected == "WIFI"){
+    NetworkSelect = 1;
+    Serial.println("WIFI ENABLE");
+  } else if (nSelected == "ETH"){
+    NetworkSelect = 2;
+    Serial.println("ETH ENABLE");
+  } else {
+    NetworkSelect = 0;
+    Serial.println("USB ONLY");
+  }
+  
   //IP
   j = 0;
   for (int i = 0; i < strlen(IP); i++) {
@@ -44,7 +58,7 @@ void setup()
       ParsedIP[j] = ParsedIP[j] + IP[i];
     }
   }
-  IPAddress local_IP((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
+  local_IP = IPAddress((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
   ParsedIP[0] = ""; ParsedIP[1] = ""; ParsedIP[2] = ""; ParsedIP[3] = "";
   //Serial.println(local_IP);
 
@@ -57,7 +71,7 @@ void setup()
       ParsedIP[j] = ParsedIP[j] + Passerel[i];
     }
   }
-  IPAddress gateway((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
+  gateway = IPAddress((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
   ParsedIP[0] = ""; ParsedIP[1] = ""; ParsedIP[2] = ""; ParsedIP[3] = "";
   //Serial.println(gateway);
 
@@ -70,7 +84,7 @@ void setup()
       ParsedIP[j] = ParsedIP[j] + Masque[i];
     }
   }
-  IPAddress subnet((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
+  subnet = IPAddress((byte)ParsedIP[0].toInt(), (byte)ParsedIP[1].toInt(), (byte)ParsedIP[2].toInt(), (byte)ParsedIP[3].toInt());
   ParsedIP[0] = ""; ParsedIP[1] = ""; ParsedIP[2] = ""; ParsedIP[3] = "";
   //Serial.println(subnet);
 
@@ -96,27 +110,8 @@ void setup()
   //
   Serial.println();
   Serial.println();
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
 
-
-  if (!WiFi.config(local_IP, gateway, subnet)) {
-    Serial.println("STA Failed to configure");
-  }
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-
-  Serial.println("");
-  Serial.println("WiFi connected.");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-
-
-  server.begin();
+  setupNetwork();
 
   //init SHT
   initSHT ();
