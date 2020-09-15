@@ -2,7 +2,7 @@
 #define TCAADDR2 0x71
 
 //Network selection
-char* Network        = "NONE";
+char* Network        = "ETH";
 
 //Wifi
 const char* ssid     = "SSID";
