@@ -3,6 +3,7 @@
 Acquisition cards for 16 SHT85 sensors.
 
 Seiral Commands :
+
     READ?
     CONFIG?
     STATUS?
@@ -33,6 +34,7 @@ Seiral Commands :
     SET BOXNETWORK=
     
   TCP/IP Commands:
+  
     GET /config
     GET /read
     GET /status
