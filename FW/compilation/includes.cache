@@ -1,0 +1,202 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\variants\\feather_esp32"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "WiFi.h",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "Ethernet.h",
+    "Includepath": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "SHTSensor.h",
+    "Includepath": "D:\\Documents\\Arduino\\libraries\\arduino-sht"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "FS.h",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\FS\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "SD.h",
+    "Includepath": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SD\\src"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "RTClib.h",
+    "Includepath": "D:\\Documents\\Arduino\\libraries\\RTClib"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "SDConfigFile.h",
+    "Includepath": "D:\\Documents\\Arduino\\libraries\\sdconfigfile"
+  },
+  {
+    "Sourcefile": "C:\\Temp\\arduino_build_729384\\sketch\\ESP32_SHT85.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\ETH.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiAP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiClient.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiScan.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\Dhcp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\Dns.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\Ethernet.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\EthernetClient.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\EthernetServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\EthernetUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\socket.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\Ethernet\\src\\utility\\w5100.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\arduino-sht\\SHTSensor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\FS\\src\\FS.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\FS\\src\\vfs_api.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SD\\src\\SD.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SD\\src\\sd_diskio.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\cloetd\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\1.0.4\\libraries\\SD\\src\\sd_diskio_crc.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\RTClib\\RTClib.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\Documents\\Arduino\\libraries\\sdconfigfile\\SDConfigFile.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
