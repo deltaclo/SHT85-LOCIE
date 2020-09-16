@@ -2,7 +2,7 @@
 #define TCAADDR2 0x71
 
 //Network selection
-char* network        = "NONE";
+char* network        = "USB";
 int NetworkSelect    = 0;
 
 //Wifi
@@ -23,9 +23,9 @@ byte macAdresse[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 WiFiServer server(80);
 EthernetServer serverEth(80);
 
-String boxName = "testBox";
+String boxName = "module";
 String capteurType = "SHT85";
-String versionFW = "  Version : 0.6b WIFI + ETH  ";
+String versionFW = "Auteur : David CLOET - LOCIE - Version : 0.7";
 
 //SHT
 SHTSensor sht[16](SHTSensor::SHT3X);

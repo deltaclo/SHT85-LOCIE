@@ -40,12 +40,15 @@ void setup()
   String nSelected = network;
   if (nSelected == "WIFI"){
     NetworkSelect = 1;
+    versionFW = versionFW + " USB + WIFI";
     Serial.println("WIFI ENABLE");
   } else if (nSelected == "ETH"){
     NetworkSelect = 2;
+    versionFW = versionFW + " USB + ETHERNET";
     Serial.println("ETH ENABLE");
   } else {
     NetworkSelect = 0;
+    versionFW = versionFW + " USB ONLY";
     Serial.println("USB ONLY");
   }
   

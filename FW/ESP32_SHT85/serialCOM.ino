@@ -132,6 +132,62 @@ void SerialCOM() {
       if (ok) {
         writeConfigFile();
       }
+    } else if (inputString.startsWith("GET SHT")) {
+      if (inputString.startsWith("GET SHT1")) {
+        Serial.println(Capteur[0]);
+      } else if (inputString.startsWith("GET SHT2")) {
+        Serial.println(Capteur[1]);
+      } else if (inputString.startsWith("GET SHT3")) {
+        Serial.println(Capteur[2]);
+      } else if (inputString.startsWith("GET SHT4")) {
+        Serial.println(Capteur[3]);
+      } else if (inputString.startsWith("GET SHT5")) {
+        Serial.println(Capteur[4]);
+      } else if (inputString.startsWith("GET SHT6")) {
+        Serial.println(Capteur[5]);
+      } else if (inputString.startsWith("GET SHT7")) {
+        Serial.println(Capteur[6]);
+      } else if (inputString.startsWith("GET SHT8")) {
+        Serial.println(Capteur[7]);
+      } else if (inputString.startsWith("GET SHT9")) {
+        Serial.println(Capteur[8]);
+      } else if (inputString.startsWith("GET SHT10")) {
+        Serial.println(Capteur[9]);
+      } else if (inputString.startsWith("GET SHT11")) {
+        Serial.println(Capteur[10]);
+      } else if (inputString.startsWith("GET SHT12")) {
+        Serial.println(Capteur[11]);
+      } else if (inputString.startsWith("GET SHT13")) {
+        Serial.println(Capteur[12]);
+      } else if (inputString.startsWith("GET SHT14")) {
+        Serial.println(Capteur[13]);
+      } else if (inputString.startsWith("GET SHT15")) {
+        Serial.println(Capteur[14]);
+      } else if (inputString.startsWith("GET SHT16")) {
+        Serial.println(Capteur[15]);
+      } else {
+        Serial.println("NOK");
+      }
+    } else if (inputString.startsWith("GET READ")) {
+      Serial.println(ReadDelay);
+    } else if (inputString.startsWith("GET MUX")) {
+      Serial.println(MUXDelay);
+    } else if (inputString.startsWith("GET BOX")) {
+      if (inputString.startsWith("GET BOXNAME")) {
+        Serial.println(boxName);
+      } else if (inputString.startsWith("GET BOXIP")) {
+        Serial.println(IP);
+      } else if (inputString.startsWith("GET BOXGW")) {
+        Serial.println(Passerel);
+      } else if (inputString.startsWith("GET BOXMASK")) {
+        Serial.println(Masque);
+      } else if (inputString.startsWith("GET BOXMAC")) {
+        Serial.println(MAC);
+      } else if (inputString.startsWith("GET BOXNETWORK")) {
+        Serial.println(network);
+      } else {
+        Serial.println("NOK");
+      }
     } else {
       Serial.println("NOK");
     }
